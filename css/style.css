@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@100;900&display=swap");
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color1-buttons: #cc1f0c;
+    --color2-buttons: #e5e5e5;
+    --primary-font-color: #000;
+    --secondary-font-color: #b2b2b2;
+    --primary-color: #ffffff;
+    --secondary-color: #eeeeee;
+}
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Navigation-bar*/
+
+.top-nav {
+    background-color: var(--primary-color);
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: 30% 35% 30%;
+    justify-content: space-between;
+    border-bottom: 1px var(--secondary-color) solid;
+}
+
+.top-nav>* {
+    margin-bottom: 1rem;
+    align-self: flex-end;
+}
+
+.top-nav ul {
+    display: flex;
+    justify-content: right;
+    order: 1;
+    padding: 0 2rem;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-family: sans-serif;
+    display: flex;
+    margin-right: 1rem;
+}
+
+.top-nav ul li {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+}
+
+.top-nav ul a:nth-child(1),
+.top-nav ul a:nth-child(2) {
+    border: 0.1rem none solid;
+    border-radius: 1rem;
+    min-width: 25%;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    text-align: center;
+    box-shadow: 0 4px 5px black;
+}
+
+.top-nav ul a:nth-child(1):hover,
+.top-nav ul a:nth-child(2):hover {
+    box-shadow: 0 2px 1px black;
+    transform: translateY(2px);
+    transition: 200ms ease;
+}
+
+.top-nav ul a:nth-child(1) {
+    background-color: var(--color1-buttons);
+}
+
+.top-nav ul a:nth-child(1) li {
+    color: #ffff;
+}
+
+.top-nav ul :nth-child(2) {
+    background-color: var(--secondary-color);
+}
+
+.top-nav ul :nth-child(2) li {
+    color: var(--primary-font-color);
+}
+
+.top-nav ul li:nth-child(1) a {
+    color: #ffffff;
+}
+
+.top-nav ul li:nth-child(2) a {
+    color: #000000;
+}
+
+.top-nav ul li svg {
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+    width: 100%;
+    height: 90%;
+    padding: 0rem 0.5rem;
+    color: var(--primary-font-color);
+}
+
+.top-nav header {
+    justify-self: center;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    transform: scaleY(1);
+}
+
+.top-nav header span:first-child {
+    font-weight: 900;
+}
+
+.top-nav div {
+    order: -1;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2.5rem;
+    width: 90%;
+    background-color: var(--secondary-color);
+    border-radius: 0.2rem;
+}
+
+.search svg {
+    width: 5%;
+}
+
+input {
+    border: none;
+    width: 100%;
+    outline: none;
+    height: 4vh;
+    padding-left: 0.5rem;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+}
+
+
+/*First container*/
