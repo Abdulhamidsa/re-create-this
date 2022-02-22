@@ -396,14 +396,10 @@ img {
 .s {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
-    /*   grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr); */
     justify-content: center;
     margin: auto;
     width: 100%;
     gap: 1.4rem;
-    /*   margin-left: 2rem;
-    margin-right: 2rem; */
 }
 
 .card-image {
@@ -508,4 +504,393 @@ img {
 .recipe-card .button:hover,
 .recipe-card .button:focus {
     background-color: var(--color2-buttons);
+}
+
+
+/*FOOTER*/
+
+footer {
+    background-color: #eeeeee;
+    height: 45vh;
+}
+
+.copyrights {
+    width: 50%;
+    text-align: center;
+    font-family: sans-serif;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    padding: 0.9rem;
+    border-top: #dddddd 1px solid;
+}
+
+footer .main-ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    gap: 1rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.main-ul div {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.main-ul div img {
+    width: 30%;
+}
+
+footer li {
+    list-style-type: none;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.ul-2 {
+    color: var(--secondary-color);
+}
+
+footer h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+footer .ul-2 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    gap: 1.5rem;
+}
+
+
+/*media**/
+
+@media only screen and (min-width: 320px) and (max-width: 750px) {
+    .top-nav {
+        grid-template-columns: 100%;
+        justify-content: center;
+    }
+    .top-nav :nth-child(3) {
+        order: 1;
+    }
+    .top-nav>* {
+        margin-bottom: 2rem;
+    }
+    .top-nav ul {
+        justify-content: center;
+        padding: 0 0.1rem;
+    }
+    .top-nav a {
+        justify-content: center;
+        margin-right: 1.6rem;
+    }
+    .top-nav header {
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+    .search {
+        margin-left: 1rem;
+    }
+    /***NEEEEEEEXXXTTTT SECTTTIOOON***/
+    .recipe-container h1 {
+        font-size: 1.2rem;
+    }
+    .recipe-container p {
+        font-size: 0.6rem;
+    }
+    .rating p :first-child {
+        font-size: 1.5rem;
+    }
+    .top-container {
+        grid-template-columns: 90%;
+        margin-top: 1rem;
+    }
+    .recipe {
+        grid-template-columns: repeat(3, 40%);
+    }
+    .recipe-ingredients :first-child {
+        font-size: 1.4rem;
+    }
+    .website-details img {
+        width: 35%;
+    }
+    .recipe-details-2 p {
+        font-size: 0.7rem;
+    }
+    .recipe-details-1 :first-child {
+        font-size: 1.1rem;
+    }
+    .recipe-details :nth-child(2) p {
+        line-height: 0.9rem;
+    }
+    .top-buttons {
+        justify-content: center;
+    }
+    .top-buttons button {
+        cursor: none;
+        font-size: 0.8rem;
+        padding: 1rem 1.6rem;
+    }
+    .top-buttons button:hover {
+        transition: none;
+    }
+    /*middle sectionnnn*/
+    .s {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 270px));
+    }
+    .recipe-card {
+        width: 100%;
+        cursor: none;
+    }
+    .card-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .card-details p {
+        font-family: sans-serif;
+        margin: 0;
+    }
+    .card-details p:nth-child(1) {
+        color: var(--secondary-color);
+        font-weight: 600;
+    }
+    .card-details :nth-child(2) p:first-child {
+        text-align: center;
+        background-color: #fff;
+        border: 0.1rem rgba(0, 0, 0, 0.055) solid;
+        box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.089);
+        border-radius: 0.4rem;
+        padding: 0.4rem;
+    }
+    .card-details p:nth-child(2) {
+        color: var(--secondary-color);
+        font-size: 0.8rem;
+    }
+    .card-details svg {
+        margin-right: 0.5rem;
+    }
+    .recipe-card .card-content a {
+        color: var(--primary-font-color);
+        font-size: 0.7rem;
+        text-align: center;
+        font-family: "poppins", sans-serif;
+    }
+    .recipe-card .card-content h2 {
+        font-size: 1.5rem;
+    }
+    .recipe-card .card-title {
+        position: relative;
+        width: max-content;
+        text-align: center;
+    }
+    .recipe-card .card-content {
+        transform: translateY(55%);
+        transition: none;
+        height: 100%;
+    }
+    .recipe-card:hover .card-content {
+        transform: none;
+        transform: translateY(55%);
+    }
+    /*fooooootttteeerrrr*/
+    footer {
+        height: 70vh;
+    }
+    .copyrights {
+        grid-column: 1 / span 2;
+        grid-row: 4;
+        font-size: 0.7rem;
+        width: 100%;
+    }
+    footer .main-ul {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 50% 50%;
+        height: 100%;
+        gap: 1rem;
+    }
+    footer .main-ul :nth-child(1) {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    footer .main-ul :nth-child(1) {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        margin-top: 0rem;
+        text-align: center;
+    }
+    .main-ul div img {
+        width: 30%;
+        margin-top: -2rem;
+    }
+    footer li {
+        font-size: 0.7rem;
+    }
+    footer h3 {
+        font-size: 0.8rem;
+        letter-spacing: 0px;
+    }
+    footer .ul-2 {
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1024px) {
+    .top-nav {
+        grid-template-columns: 100%;
+        justify-content: center;
+    }
+    .top-nav :nth-child(3) {
+        order: 1;
+    }
+    .top-nav>* {
+        margin-bottom: 2rem;
+    }
+    .top-nav ul {
+        justify-content: center;
+        padding: 0 0.1rem;
+    }
+    .top-nav a {
+        justify-content: center;
+        margin-right: 1.6rem;
+    }
+    .top-nav header {
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+    .search {
+        margin-left: 2.5rem;
+    }
+    /***NEEEEEEEXXXTTTT SECTTTIOOON***/
+    .recipe-container h1 {
+        font-size: 1.2rem;
+    }
+    .recipe-container p {
+        font-size: 0.6rem;
+    }
+    .rating p :first-child {
+        font-size: 1.5rem;
+    }
+    .top-container {
+        grid-template-columns: 90%;
+        margin-top: 1rem;
+    }
+    .recipe {
+        grid-template-columns: repeat(3, 40%);
+    }
+    .recipe-ingredients :first-child {
+        font-size: 1.4rem;
+    }
+    .website-details img {
+        width: 35%;
+    }
+    .recipe-details-2 p {
+        font-size: 0.7rem;
+    }
+    .recipe-details-1 :first-child {
+        font-size: 1.1rem;
+    }
+    .recipe-details :nth-child(2) p {
+        line-height: 0.9rem;
+    }
+    .top-buttons {
+        justify-content: center;
+    }
+    .top-buttons button {
+        cursor: none;
+        font-size: 0.8rem;
+        padding: 1rem 1.6rem;
+    }
+    .top-buttons button:hover {
+        transition: none;
+    }
+    /*middle sectionnnn*/
+    .s {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 200px));
+    }
+    .recipe-card {
+        width: 100%;
+        cursor: none;
+    }
+    .card-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .card-details p {
+        font-family: sans-serif;
+        margin: 0;
+    }
+    .card-details p:nth-child(2) {
+        font-size: 0.8rem;
+    }
+    .card-details svg {
+        margin-right: 0.5rem;
+    }
+    .recipe-card .card-content a {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+    .recipe-card .card-content h2 {
+        font-size: 1rem;
+    }
+    .recipe-card .card-content {
+        transform: translateY(55%);
+        transition: none;
+        height: 100%;
+    }
+    .recipe-card:hover .card-content {
+        transform: none;
+        transform: translateY(55%);
+    }
+    /*fooooootttteeerrrr*/
+    footer {
+        height: 80vh;
+    }
+    .copyrights {
+        grid-column: 1 / span 2;
+        grid-row: 4;
+        font-size: 1rem;
+        width: 100%;
+    }
+    footer .main-ul {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 50% 50%;
+        height: 100%;
+        gap: 1rem;
+    }
+    footer .main-ul :nth-child(1) {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    footer .main-ul :nth-child(1) {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        margin-top: 0rem;
+        text-align: center;
+    }
+    .main-ul div img {
+        width: 15%;
+        margin-top: -3rem;
+    }
+    footer li {
+        font-size: 0.8rem;
+    }
+    footer h3 {
+        font-size: 1rem;
+        letter-spacing: 0px;
+    }
+    footer .ul-2 {
+        gap: 0.5rem;
+        text-align: center;
+    }
 }
