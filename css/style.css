@@ -11,6 +11,7 @@
     --secondary-font-color: #b2b2b2;
     --primary-color: #ffffff;
     --secondary-color: #474747;
+    --color3: #ececec;
 }
 
 body {
@@ -28,7 +29,7 @@ body {
     align-items: flex-end;
     grid-template-columns: 30% 35% 30%;
     justify-content: space-between;
-    border-bottom: 1px var(--secondary-color) solid;
+    border-bottom: 1px var(--color3) solid;
 }
 
 .top-nav>* {
@@ -70,7 +71,7 @@ body {
 
 .top-nav ul a:nth-child(1):hover,
 .top-nav ul a:nth-child(2):hover {
-    box-shadow: 0 2px 1px black;
+    box-shadow: 0 1px 1px black;
     transform: translateY(3px);
     transition: 200ms ease-in-out;
 }
@@ -100,7 +101,7 @@ body {
 }
 
 .top-nav ul li svg {
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--color3);
     border-radius: 50%;
     width: 100%;
     height: 90%;
@@ -328,7 +329,14 @@ img {
     position: relative;
     font-weight: 600;
     letter-spacing: 0.5px;
-    overflow: ;
+    text-align: center;
+    box-shadow: 0 4px 5px black;
+}
+
+.top-buttons button:hover {
+    box-shadow: 0 1px 1px black;
+    transform: translateY(3px);
+    transition: 200ms ease-in-out;
 }
 
 .top-buttons button:first-child {
@@ -353,4 +361,151 @@ img {
 .top-buttons button span :focus {
     transform: translateX(555px);
     transition: 5s ease;
+}
+
+
+/*MIDDLE SECTION*/
+
+.related-recipe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.related-recipe :first-child {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.related-recipe :nth-child(2) {
+    text-decoration: none;
+    color: #757575;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.related-recipe :nth-child(2)::after {
+    content: " >";
+}
+
+.s {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
+    /*   grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr); */
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    gap: 1.4rem;
+    /*   margin-left: 2rem;
+    margin-right: 2rem; */
+}
+
+.card-image {
+    width: 100%;
+    margin: auto;
+}
+
+.recipe-card {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-details p {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.card-details p:nth-child(1) {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.card-details :nth-child(2) p:first-child {
+    text-align: center;
+    background-color: #fff;
+    border: 0.1rem rgba(0, 0, 0, 0.055) solid;
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.089);
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+}
+
+.card-details p:nth-child(2) {
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+}
+
+.card-details svg {
+    margin-right: 0.5rem;
+}
+
+.recipe-card .card-content a {
+    color: var(--primary-font-color);
+    font-size: 0.7rem;
+    text-align: center;
+    font-family: "poppins", sans-serif;
+}
+
+.recipe-card .card-content h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.recipe-card .card-title {
+    position: relative;
+    width: max-content;
+    text-align: center;
+}
+
+.recipe-card .card-content {
+    padding: 0 0.5rem;
+    background-color: #00000069;
+    transform: translateY(140%);
+    transition: transform 400ms ease-out;
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+}
+
+.recipe-card:hover .card-content {
+    transform: translateY(105%);
+}
+
+.recipe-card:hover .card-title::after {
+    transform: scale(1);
+    position: absolute;
+    transform-origin: left;
+    width: 100%;
+    transition: transform 600ms ease;
+}
+
+.recipe-card .button {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: var(--primary-font-color);
+    background-color: rgb(255, 255, 255);
+    padding: 1em;
+}
+
+.recipe-card .button:hover,
+.recipe-card .button:focus {
+    background-color: var(--color2-buttons);
 }
